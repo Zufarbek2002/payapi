@@ -1,0 +1,124 @@
+.bg_img_box{
+    background-image: url(../image/bg_desk_img.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 640px 608px;
+
+    @media screen and (max-width: 768px){
+        background-image: url(../image/bg_tab_img.png);
+        background-position: top center;
+        background-size: 100% 286px;
+        background-size: auto;
+    }
+
+}
+
+#header {
+
+    .header__container {
+        @include flexB;
+        gap: 64px;
+        position: fixed;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .header__logo {
+        max-width: 135px;
+        width: 100%;
+    }
+
+    .header__navbar {
+        @include flexB;
+        max-width: 912px;
+        width: 100%;
+    }
+
+    .header__list {
+        display: flex;
+        gap: 40px;
+    }
+
+    .header__link {
+        color: $sanBlueColor;
+        font-size: 15px;
+        font-weight: 700;
+        opacity: 0.7;
+        transition: all .4s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .header__btn {
+        @include btn;
+    }
+
+    .header__label {
+        display: none;
+        cursor: pointer;
+    }
+
+    .header__input {
+        display: none;
+
+        &:checked~.header__navbar{
+            transform: translate(0);
+        }
+    }
+
+    @media screen and (max-width: 676px) {
+        .header__container {
+            gap: 40px;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .header__label {
+            display: block;
+        }
+
+        .header__label--del{
+            position: absolute;
+            right: 27px;
+            top: 48px;
+        }
+
+        .header__navbar {
+            background-color: $mirageBlueColor;
+            position: fixed;
+            z-index: 3;
+            top: -40px;
+            right: 0;
+            width: 80vw;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: flex-start;
+            row-gap: 32px;
+            transition: all .4s ease;
+            transform: translateX(100%);
+        }
+
+        .header__list{
+            flex-direction: column;
+            row-gap: 32px;
+            margin-top: 95px;
+            padding-top: 43px;
+            border-top: 1px solid #3d464e;
+            text-align: center;
+            max-width: 249px;
+            width: 100%;
+        }
+
+        .header__link{
+            color: $waterWhiteColor;
+        }
+
+        .header__btn{
+            max-width: 249px;
+        }
+    }
+}

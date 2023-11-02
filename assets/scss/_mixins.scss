@@ -1,0 +1,87 @@
+@mixin flexB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin btn {
+    border-radius: 24px;
+    background: $darkPinkColor;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    color: $waterWhiteColor;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.115px;
+    padding: 16px 0;
+    max-width: 173px;
+    width: 100%;
+    transition: all .4s ease;
+
+    &:hover {
+        background-color: $charmPinkColor
+    }
+
+    &:active {
+        background-color: $charmPinkColor;
+    }
+}
+
+@mixin title($color: $sanBlueColor) {
+    color: $color;
+    font-family: 'DM Serif Display';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: -0.369px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: -0.246px;
+    }
+}
+
+@mixin pText {
+    color: $lightSanBlueColor;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    padding-top: 24px;
+}
+
+@mixin emailBox {
+    border-radius: 24px;
+    background: $waterWhiteColor;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    max-width: 445px;
+    width: 100%;
+    padding-left: 27px;
+
+    @media screen and (max-width: 420px) {
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: none;
+        padding-left: 0;
+    }
+}
+
+@mixin email {
+    color: #36536B;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+        opacity: 0.5;
+    }
+
+    @media screen and (max-width: 420px) {
+        border-radius: 24px;
+        background: #FBFCFE;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        max-width: 100%;
+        width: 100%;
+        padding: 16px 24px;
+    }
+}

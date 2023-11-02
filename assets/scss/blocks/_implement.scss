@@ -1,0 +1,44 @@
+#implement {
+    padding-top: 150px;
+
+    .implement__container {
+        @include flexB;
+        gap: 25px;
+    }
+
+    .implement__img {
+        max-width: 445px;
+        width: 100%;
+        box-shadow: 25px 25px 80px 0px rgba(54, 83, 107, 0.30);
+    }
+
+    .implement__content {
+        max-width: 445px;
+        width: 100%;
+    }
+
+    .implement__title {
+        @include title;
+    }
+
+    .implement__text {
+        @include pText;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 100px;
+        .implement__container {
+            flex-direction: column;
+            row-gap: 48px;
+        }
+
+        .implement__content {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .implement__img {
+            max-width: 391px;
+        }
+    }
+}

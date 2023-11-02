@@ -1,0 +1,119 @@
+#hero {
+    padding-top: 162px;
+    padding-bottom: 75px;
+
+    .hero__container {
+        @include flexB;
+    }
+
+    .hero__form {
+        max-width: 546px;
+    }
+
+    .hero__title {
+        @include title;
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -0.554px;
+    }
+
+    .hero__output {
+        margin-top: 21px;
+        @include emailBox;
+        @include flexB;
+    }
+
+    .hero__email {
+        @include email;
+    }
+
+    .hero__btn {
+        @include btn;
+    }
+
+    .hero__text_box {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        padding-left: 27px;
+    }
+
+    .hero__text {
+        color: $sanBlueColor;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .hero__text_link {
+        opacity: 0.7;
+        color: $sanBlueColor;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .hero__img {
+        max-width: 257px;
+        width: 100%;
+        margin-right: 97px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .hero__img{
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .hero__container {
+            flex-direction: column-reverse;
+        }
+
+        .hero__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 48px;
+        }
+
+        .hero__title {
+            text-align: center;
+            font-size: 48px;
+            line-height: 56px;
+            letter-spacing: -0.369px;
+        }
+
+        .hero__text_box {
+            padding-left: 0;
+        }
+
+        .hero__img {
+            max-width: 155px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        .hero__title {
+            font-size: 32px;
+            line-height: 36px;
+            letter-spacing: -0.246px;
+        }
+
+        .hero__btn{
+            margin-top: 16px;
+            max-width: 100%;
+        }
+
+        .hero__form{
+            padding-top: 24px;
+        }
+
+        .hero__img{
+            max-width: 127px;
+        }
+    }
+}
